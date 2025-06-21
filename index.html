@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thời Gian Biểu Của Tôi</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <div class="controls">
+            <h2>Bảng điều khiển</h2>
+
+            <div class="control-group">
+                <label for="event-title">Tên sự kiện:</label>
+                <input type="text" id="event-title" placeholder="Ví dụ: Học lập trình">
+                <button id="add-event-btn">Thêm sự kiện</button>
+            </div>
+
+            <div class="control-group">
+                <label for="background-url">URL Hình nền (chế độ sáng):</label>
+                <input type="text" id="background-url" placeholder="Dán link ảnh vào đây">
+                <button id="change-bg-btn">Áp dụng</button>
+            </div>
+
+            <div class="control-group">
+                <h3>Giao diện</h3>
+                <button id="dark-mode-toggle">Bật / Tắt Chế độ tối</button>
+            </div>
+
+            <div class="control-group">
+                <h3>Âm nhạc thư giãn</h3>
+                <audio id="background-music" controls loop>
+                    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+                    Trình duyệt của bạn không hỗ trợ thẻ audio.
+                </audio>
+            </div>
+        </div>
+
+        <div id='calendar'></div>
+    </div>
+
+    <script src='https://cdn.jsdelivr.net/npm/fullcalendar@6.1.11/index.global.min.js'></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

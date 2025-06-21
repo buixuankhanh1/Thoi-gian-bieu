@@ -1,0 +1,162 @@
+/* Thiết lập font chữ và nền cơ bản */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f0f2f5;
+    background-size: cover;
+    background-position: center;
+    transition: background-image 0.5s ease-in-out, background-color 0.3s ease;
+    color: #333;
+}
+
+/* Container chính để sắp xếp bố cục */
+.container {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap; /* Cho phép xuống dòng trên màn hình nhỏ */
+}
+
+/* Khu vực bảng điều khiển */
+.controls {
+    width: 250px;
+    min-width: 250px; /* Đảm bảo không bị co lại quá nhỏ */
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    height: fit-content;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.controls h2, .controls h3 {
+    margin-top: 0;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+    transition: border-bottom-color 0.3s ease;
+}
+
+/* Các nhóm điều khiển (input, button) */
+.control-group {
+    margin-bottom: 20px;
+}
+
+.control-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.control-group input[type="text"] {
+    width: calc(100% - 18px);
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    transition: background-color 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+}
+
+.control-group button {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 4px;
+    background-color: #007bff;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+}
+
+.control-group button:hover {
+    background-color: #0056b3;
+}
+
+/* Định dạng cho trình phát nhạc */
+audio {
+    width: 100%;
+    transition: filter 0.3s ease;
+}
+
+/* Khu vực lịch, chiếm phần còn lại */
+#calendar {
+    flex-grow: 1; /* Tự động co giãn để lấp đầy không gian */
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 20px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+/* Thêm biểu tượng con trỏ tay khi di chuột qua sự kiện */
+.fc-event-main {
+    cursor: pointer;
+}
+
+
+/*
+================================
+--- CÁC QUY TẮC CHO CHẾ ĐỘ TỐI ---
+================================
+*/
+
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+    background-image: none;
+}
+
+body.dark-mode .controls {
+    background-color: rgba(40, 40, 40, 0.9);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    color: #e0e0e0;
+}
+
+body.dark-mode .controls h2, 
+body.dark-mode .controls h3 {
+    border-bottom-color: #555;
+}
+
+body.dark-mode .control-group input[type="text"] {
+    background-color: #333;
+    border-color: #555;
+    color: #fff;
+}
+
+body.dark-mode .control-group input[type="text"]::placeholder {
+    color: #888;
+}
+
+body.dark-mode .control-group button {
+    background-color: #0d6efd;
+}
+body.dark-mode .control-group button:hover {
+    background-color: #0b5ed7;
+}
+
+body.dark-mode audio {
+    filter: invert(1) hue-rotate(180deg);
+}
+
+body.dark-mode #calendar {
+    background-color: rgba(28, 28, 28, 0.95);
+}
+
+body.dark-mode .fc .fc-toolbar-title {
+    color: #ffffff;
+}
+
+body.dark-mode .fc .fc-button-primary {
+    background-color: #0d6efd;
+    border-color: #0d6efd;
+}
+
+body.dark-mode .fc-col-header-cell-cushion,
+body.dark-mode .fc-timegrid-slot-label-cushion {
+    color: #d0d0d0;
+}
+
+body.dark-mode .fc-theme-standard th, 
+body.dark-mode .fc-theme-standard td, 
+body.dark-mode .fc-scrollgrid {
+    border-color: #444;
+}
